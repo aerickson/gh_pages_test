@@ -1,95 +1,138 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <title>Worker Pools Graph Viewer (Class Styling + Filters)</title>
+  <title>Taskcluster Cytoscape Viewer</title>
   <script src="https://unpkg.com/cytoscape@3.25.0/dist/cytoscape.min.js"></script>
   <script src="https://unpkg.com/cytoscape-tidytree@0.2.0/dist/cytoscape-tidytree.min.js"></script>
-<style>
+  <style>
     body {
       margin: 0;
       font-family: sans-serif;
-      display: flex;
       height: 100vh;
+      display: flex;
+      flex-direction: column;
       overflow: hidden;
     }
-    #sidebar {
-      width: 250px;
-      background: #f4f4f4;
-      border-right: 1px solid #ccc;
-      padding: 15px;
-      box-sizing: border-box;
-      overflow-y: auto;
-    }
+
     #cy {
-      flex-grow: 1;
-      height: 100%;
+      flex: 1 1 auto;
+      min-height: 0;
+      min-width: 0;
     }
-    select, input[type="text"], button {
-      width: 100%;
-      margin: 8px 0;
-      padding: 5px;
+
+    #bottombar {
+      flex: 0 0 auto;
+      background: #f4f4f4;
+      border-top: 1px solid #ccc;
+      padding: 12px 18px 8px 18px;
       box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 18px 32px;
+      z-index: 10;
     }
-    h2 {
-      margin-top: 0;
+
+    #bottombar>* {
+      margin-bottom: 4px;
     }
+
     .legend-group {
-      margin: 10px 0;
+      margin: 0 18px 0 0;
     }
+
+    .small-layout-btn {
+      font-size: 0.8em;
+      padding: 3px 6px;
+      width: 48%;
+      min-width: unset;
+      margin: 2px 0;
+    }
+
+    #selected-info {
+      background: #e9e9e9;
+      border-radius: 4px;
+      padding: 8px;
+      margin: 0 18px 0 0;
+    }
+
     label {
       display: block;
+      padding-bottom: 2px;
+    }
+
+    .inline-pre {
+      font-family: "Courier New", Courier, monospace;
+      background: #f5f5f5;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 0.98em;
+      white-space: pre;
     }
   </style>
 </head>
+
 <body>
-  <div id="sidebar">
-    <h2>Controls</h2>
-    <label for="layout">Layout:</label>
-    <select id="layout">
-      <option value="initial">Initial</option>
-      <option value="tidytree">Tidytree</option>
-      <option value="cose">Cose</option>
-      <option value="grid">Grid</option>
-      <option value="circle">Circle</option>
-      <option value="breadthfirst">Breadthfirst</option>
-      <option value="concentric">Concentric</option>
-      <option value="random">Random</option>
-      <!-- <option value="cise">Cise</option> -->
-      <!-- <option value="cose-bilkent">Cose-Bilkent</option>
-      <option value="cola">Cola</option>
-      <option value="euler">Euler</option>
-      <option value="spread">Spread</option>
-      <option value="dagre">Dagre</option>
-      <option value="klay">Klay</option> -->
-    </select>
-    <button onclick="runLayout()">Apply Layout</button>
-
-    <label for="search">Search Node:</label>
-    <input type="text" id="search" placeholder="Enter label or ID">
-    <button onclick="searchNode()">Search</button>
-    <button onclick="fitGraph()">Fit View</button>
-    <button onclick="clearHighlights()">Clear Highlights</button>
-<button onclick="showOnlyLinked()">Show Only Linked</button>
-<button onclick="showAll()">Show All Nodes</button>
-
-    <div id="selected-info" style="margin: 10px 0; padding: 8px; background: #e9e9e9; border-radius: 4px;">
-      <strong>Selected Nodes:</strong>
-      <div id="selected-count">0</div>
-      <ul id="selected-list" style="margin:0; padding-left: 18px;"></ul>
+  <div id="cy"></div>
+  <div id="bottombar">
+    <div>
+      <label>Layout:</label>
+      <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px;">
+        <button class="small-layout-btn" onclick="applyLayout('initial')">Initial</button>
+        <button class="small-layout-btn" onclick="applyLayout('tidytree')">Tidytree</button>
+        <button class="small-layout-btn" onclick="applyLayout('cose')">Cose</button>
+        <button class="small-layout-btn" onclick="applyLayout('grid')">Grid</button>
+      </div>
+      <button onclick="fitGraph()">Fit View</button>
+      <div style="margin-top: 8px;">
+        <label>Debug:</label>
+        <button onclick="showMetadataWindow()">Metadata</button>
+      </div>
     </div>
 
-    <div class="legend-group">
-      <h3>Node Type Filter</h3>
+    <div class="legend-group" style="min-width: 180px;">
+
+      <label>Node Type Filter:</label>
       <label><input type="checkbox" class="typeFilter" value="taskNode" checked> taskNode</label>
       <label><input type="checkbox" class="typeFilter" value="poolNode" checked> poolNode</label>
       <label><input type="checkbox" class="typeFilter" value="hwPoolNode" checked> hwPoolNode</label>
       <label><input type="checkbox" class="typeFilter" value="aliasNode" checked> aliasNode</label>
       <label><input type="checkbox" class="typeFilter" value="imageNode" checked> imageNode</label>
       <label><input type="checkbox" class="typeFilter" value="l3imageNode" checked> l3imageNode</label>
+      <div style="padding-top: 12px; display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 6px;">
+        <button class="small-layout-btn" style="width:48%;" type="button" onclick="toggleTypeFilters(false)">Disable All</button>
+        <button class="small-layout-btn" style="width:48%;" type="button" onclick="toggleTypeFilters(true)">Enable All</button>
+      </div>
+    </div>
+
+    <div>
+      <label for="search">Search Node:</label>
+      <input type="text" id="search" placeholder="Enter label or ID">
+      <button onclick="searchNode()">Search</button>
+      <button onclick="clearHighlights()">Clear Highlights</button>
+      <div style="margin-top: 8px;">
+        <button onclick="showOnlyLinked()">Show Only Linked</button>
+        <button onclick="showAll()">Show All Nodes</button>
+      </div>
+    </div>
+    <div id="selected-info">
+      <strong>Selected Nodes:</strong>
+      <div id="selected-count">0</div>
+      <ul id="selected-list" style="margin:0; padding-left: 18px;"></ul>
     </div>
   </div>
-  <div id="cy"></div>
+
+  <div id="metadata-window"
+    style="display:none; position:fixed; top:60px; right:40px; width:680px; background:#fff; border:1px solid #888; border-radius:8px; box-shadow:0 2px 12px #0002; z-index:1000; padding:16px;">
+    <div id="metadata-header" style="cursor:move; font-weight:bold; margin-bottom:8px;">
+      Graph Metadata
+      <button onclick="hideMetadataWindow()" style="float:right;">✕</button>
+    </div>
+    <ul id="metadata-list-window"
+      style="margin:0; padding-left:18px; font-size:0.95em; max-height:300px; overflow-y:auto;"></ul>
+  </div>
 
   <script>
     var cy;
@@ -205,11 +248,56 @@
       });
     }
 
+    function toggleMetadata() {
+      const list = document.getElementById('metadata-list');
+      list.style.display = (list.style.display === 'none' || !list.style.display) ? 'block' : 'none';
+    }
+
+    function showMetadataWindow() {
+      document.getElementById('metadata-window').style.display = 'block';
+    }
+    function hideMetadataWindow() {
+      document.getElementById('metadata-window').style.display = 'none';
+    }
+
+    // Make the window draggable
+    (function () {
+      const win = document.getElementById('metadata-window');
+      const header = document.getElementById('metadata-header');
+      let offsetX = 0, offsetY = 0, isDown = false;
+
+      header.onmousedown = function (e) {
+        isDown = true;
+        offsetX = win.offsetLeft - e.clientX;
+        offsetY = win.offsetTop - e.clientY;
+        document.onmousemove = function (e) {
+          if (!isDown) return;
+          win.style.left = (e.clientX + offsetX) + 'px';
+          win.style.top = (e.clientY + offsetY) + 'px';
+        };
+        document.onmouseup = function () {
+          isDown = false;
+          document.onmousemove = null;
+          document.onmouseup = null;
+        };
+      };
+    })();
+
     fetch('worker_pools_images.cyto.json')
       .then(response => response.json())
       .then(raw => {
         const elements = raw.elements || raw;
-        
+
+        // Estimate width for each node based on label length
+        elements.forEach(el => {
+          if (el.data && (el.data.label || el.data.id)) {
+            // Estimate: 8px per character + 20px padding
+            const label = el.data.label || el.data.id;
+            el.data.width = Math.max(40, label.length * 8 + 20); // min width 40
+            el.data.height = 36; // or adjust as needed
+          }
+        });
+
         // Assign Y-row positions by class using preset layout
         const classGroups = {};
         let xSpacing = 150;
@@ -243,23 +331,23 @@
 
         // Create Cytoscape with preset positions
         cy = cytoscape({
-
           container: document.getElementById('cy'),
           elements: elements,
           style: [
             {
               selector: 'node',
               style: {
-                'label': function(ele) { return ele.data('label') || ele.id(); },
+                'label': function (ele) { return ele.data('label') || ele.id(); },
                 'text-valign': 'center',
                 'text-halign': 'center',
                 'shape': 'roundrectangle',
-                'width': 'label',
-                'padding': '10px',
+                'width': 'data(width)',
+                'height': 'data(height)',
                 'border-width': 1,
                 'border-color': '#333',
                 'color': '#000',
-                'background-color': '#ccc'
+                'background-color': '#ccc',
+                'padding': '2px'
               }
             },
             { selector: '.taskNode', style: { 'background-color': '#dda0dd' } },
@@ -295,7 +383,7 @@
           }
         });
 
-        cy.on('tap', 'node', function(evt) {
+        cy.on('tap', 'node', function (evt) {
           var node = evt.target;
           var neighborhood = node.closedNeighborhood();
           cy.elements().removeClass('highlighted');
@@ -303,7 +391,7 @@
         });
 
         // Also update sidebar on selection changes (e.g. via ctrl+click)
-        cy.on('select unselect', 'node', function() {
+        cy.on('select unselect', 'node', function () {
           updateSelectedInfo();
         });
 
@@ -317,6 +405,27 @@
             });
           });
         });
+
+        // Surface metadata in the floating window
+        if (raw.metadata) {
+          const metaList = document.getElementById('metadata-list-window');
+          metaList.innerHTML = '';
+          for (const [key, value] of Object.entries(raw.metadata)) {
+            const li = document.createElement('li');
+            if (typeof value === 'object' && value !== null) {
+              const pre = document.createElement('pre');
+              pre.style.margin = '0';
+              pre.style.whiteSpace = 'pre-wrap';
+              pre.className = 'inline-pre';
+              pre.textContent = JSON.stringify(value, null, 2);
+              li.innerHTML = '<strong>' + key + ':</strong> ';
+              li.appendChild(pre);
+            } else {
+              li.innerHTML = `<strong>${key}:</strong> <span class="inline-pre">${value}</span>`;
+            }
+            metaList.appendChild(li);
+          }
+        }
       });
 
     function restoreInitialPositions() {
@@ -328,8 +437,7 @@
       });
     }
 
-    function runLayout() {
-      const layoutName = document.getElementById('layout').value;
+    function applyLayout(layoutName) {
       if (layoutName === 'initial') {
         restoreInitialPositions();
         cy.layout({ name: 'preset', fit: true, padding: 50 }).run();
@@ -354,7 +462,7 @@
     }
 
     // Enable pressing Enter in the search field to trigger search
-    document.getElementById('search').addEventListener('keydown', function(e) {
+    document.getElementById('search').addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
         searchNode();
       }
@@ -371,6 +479,19 @@
         updateSelectedInfo();
       }
     }
+
+    // Add this function to handle enable/disable all
+    function toggleTypeFilters(enable) {
+      document.querySelectorAll('.typeFilter').forEach(cb => {
+        cb.checked = enable;
+      });
+      // Trigger change event to update graph
+      const event = new Event('change');
+      document.querySelectorAll('.typeFilter').forEach(cb => {
+        cb.dispatchEvent(event);
+      });
+    }
   </script>
 </body>
+
 </html>
