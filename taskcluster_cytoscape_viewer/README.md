@@ -14,13 +14,17 @@ This tool aims at helping people find those answers themselves.
 
 We lack task data for other repositories that submit tasks to fxci. For example, the translations GPU workers don't have any tasks in the dataset. Similarly, the VPN workers don't have any tasks.
 
-## How To Run
+## How To Run on Web
+
+Currently deployed to: https://aerickson.github.io/gh_pages_test/viewer.html
+
+## How To Run Locally
 
 ### Unix
 
 ```bash
 ./serve.sh
-# surf to http://localhost:8080/worker_pools_viewer_focusmode_multiselect.html
+# surf to http://localhost:8080/viewer.html
 ```
 
 ### Windows
@@ -30,7 +34,7 @@ Untested. Please report back.
 ```bash
 # in powershell
 serve.ps1
-# surf to http://localhost:8080/worker_pools_viewer_focusmode_multiselect.html
+# surf to http://localhost:8080/viewer.html
 ```
 
 ## Usage
