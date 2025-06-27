@@ -16,7 +16,7 @@ We lack task data for other repositories that submit tasks to fxci. For example,
 
 ## How To Run on Web
 
-Currently deployed to: https://aerickson.github.io/gh_pages_test/viewer.html
+Currently deployed to: [https://aerickson.github.io/gh_pages_test/viewer.html](https://aerickson.github.io/gh_pages_test/viewer.html)
 
 ## How To Run Locally
 
@@ -45,12 +45,14 @@ Click around and explore for now. Send me feedback.
 
 ### Color Guide
 
+```
 Purple: tasks
 Light Green: cloud pool
 Dark Green: hw pool
 Light Blue: image alias
 Light Yellow: l1 image
 Light Pink: l3 image
+```
 
 ### Example 1: Find out where `perftest-*-summarizer*` tasks run.
 
