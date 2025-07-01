@@ -7384,31 +7384,31 @@
     },
     {
       "data": {
-        "id": "build_",
-        "label": "build-* (38)",
+        "id": "build",
+        "label": "build* (38)",
         "type": "taskNode",
         "color": "#f9f",
-        "group": "build-*",
+        "group": "build*",
         "count": 38
       },
       "classes": "taskNode"
     },
     {
       "data": {
-        "id": "build___pool_group_b_linux_gcp__group-pool",
-        "source": "build_",
+        "id": "build__pool_group_b_linux_gcp__group-pool",
+        "source": "build",
         "target": "pool_group_b_linux_gcp",
         "type": "group-pool",
-        "group": "build-*"
+        "group": "build*"
       }
     },
     {
       "data": {
-        "id": "build___pool_group_b_linuxsuffix__group-pool",
-        "source": "build_",
+        "id": "build__pool_group_b_linuxsuffix__group-pool",
+        "source": "build",
         "target": "pool_group_b_linuxsuffix",
         "type": "group-pool",
-        "group": "build-*"
+        "group": "build*"
       }
     },
     {
@@ -8023,18 +8023,18 @@
     },
     {
       "data": {
-        "id": "build__signing__hwpool_scriptworkerprovv1_geckosigningmac14m2__group-pool",
+        "id": "build__signing__hwpool_scriptworkerprovv1_depgeckosigningmac14m2__group-pool",
         "source": "build__signing",
-        "target": "hwpool_scriptworkerprovv1_geckosigningmac14m2",
+        "target": "hwpool_scriptworkerprovv1_depgeckosigningmac14m2",
         "type": "group-pool",
         "group": "build-*-signing*"
       }
     },
     {
       "data": {
-        "id": "build__signing__hwpool_scriptworkerprovv1_depgeckosigningmac14m2__group-pool",
+        "id": "build__signing__hwpool_scriptworkerprovv1_geckosigningmac14m2__group-pool",
         "source": "build__signing",
-        "target": "hwpool_scriptworkerprovv1_depgeckosigningmac14m2",
+        "target": "hwpool_scriptworkerprovv1_geckosigningmac14m2",
         "type": "group-pool",
         "group": "build-*-signing*"
       }
@@ -8239,18 +8239,18 @@
     },
     {
       "data": {
-        "id": "docker__pool_group_images_gcp__group-pool",
+        "id": "docker__pool_group_images_gcp_aarch64__group-pool",
         "source": "docker",
-        "target": "pool_group_images_gcp",
+        "target": "pool_group_images_gcp_aarch64",
         "type": "group-pool",
         "group": "docker*"
       }
     },
     {
       "data": {
-        "id": "docker__pool_group_images_gcp_aarch64__group-pool",
+        "id": "docker__pool_group_images_gcp__group-pool",
         "source": "docker",
-        "target": "pool_group_images_gcp_aarch64",
+        "target": "pool_group_images_gcp",
         "type": "group-pool",
         "group": "docker*"
       }
@@ -8348,27 +8348,18 @@
     },
     {
       "data": {
-        "id": "fuzzing__pool_group_t_linux_docker__group-pool",
-        "source": "fuzzing",
-        "target": "pool_group_t_linux_docker",
-        "type": "group-pool",
-        "group": "fuzzing*"
-      }
-    },
-    {
-      "data": {
-        "id": "fuzzing__hwpool_relenghardware_geckotosx1015r8__group-pool",
-        "source": "fuzzing",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
-        "type": "group-pool",
-        "group": "fuzzing*"
-      }
-    },
-    {
-      "data": {
         "id": "fuzzing__pool_group_b_linux_gcp__group-pool",
         "source": "fuzzing",
         "target": "pool_group_b_linux_gcp",
+        "type": "group-pool",
+        "group": "fuzzing*"
+      }
+    },
+    {
+      "data": {
+        "id": "fuzzing__hwpool_relenghardware_geckotosx1500m4__group-pool",
+        "source": "fuzzing",
+        "target": "hwpool_relenghardware_geckotosx1500m4",
         "type": "group-pool",
         "group": "fuzzing*"
       }
@@ -8384,9 +8375,18 @@
     },
     {
       "data": {
-        "id": "fuzzing__hwpool_relenghardware_geckotosx1500m4__group-pool",
+        "id": "fuzzing__pool_group_t_linux_docker__group-pool",
         "source": "fuzzing",
-        "target": "hwpool_relenghardware_geckotosx1500m4",
+        "target": "pool_group_t_linux_docker",
+        "type": "group-pool",
+        "group": "fuzzing*"
+      }
+    },
+    {
+      "data": {
+        "id": "fuzzing__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "source": "fuzzing",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "fuzzing*"
       }
@@ -8453,33 +8453,6 @@
     },
     {
       "data": {
-        "id": "generate__pool_group_win11_a64_24h2_suffix__group-pool",
-        "source": "generate",
-        "target": "pool_group_win11_a64_24h2_suffix",
-        "type": "group-pool",
-        "group": "generate*"
-      }
-    },
-    {
-      "data": {
-        "id": "generate__pool_group_b_win2022__group-pool",
-        "source": "generate",
-        "target": "pool_group_b_win2022",
-        "type": "group-pool",
-        "group": "generate*"
-      }
-    },
-    {
-      "data": {
-        "id": "generate__hwpool_relenghardware_gecko3bosx1015__group-pool",
-        "source": "generate",
-        "target": "hwpool_relenghardware_gecko3bosx1015",
-        "type": "group-pool",
-        "group": "generate*"
-      }
-    },
-    {
-      "data": {
         "id": "generate__pool_group_b_linux_gcp__group-pool",
         "source": "generate",
         "target": "pool_group_b_linux_gcp",
@@ -8498,9 +8471,36 @@
     },
     {
       "data": {
+        "id": "generate__hwpool_relenghardware_gecko3bosx1015__group-pool",
+        "source": "generate",
+        "target": "hwpool_relenghardware_gecko3bosx1015",
+        "type": "group-pool",
+        "group": "generate*"
+      }
+    },
+    {
+      "data": {
         "id": "generate__hwpool_relenghardware_gecko3bosxarm64__group-pool",
         "source": "generate",
         "target": "hwpool_relenghardware_gecko3bosxarm64",
+        "type": "group-pool",
+        "group": "generate*"
+      }
+    },
+    {
+      "data": {
+        "id": "generate__pool_group_b_win2022__group-pool",
+        "source": "generate",
+        "target": "pool_group_b_win2022",
+        "type": "group-pool",
+        "group": "generate*"
+      }
+    },
+    {
+      "data": {
+        "id": "generate__pool_group_win11_a64_24h2_suffix__group-pool",
+        "source": "generate",
+        "target": "pool_group_win11_a64_24h2_suffix",
         "type": "group-pool",
         "group": "generate*"
       }
@@ -8567,18 +8567,18 @@
     },
     {
       "data": {
-        "id": "l10n__pool_group_b_linux_gcp__group-pool",
+        "id": "l10n__hwpool_scriptworkerk8s_gecko3lando__group-pool",
         "source": "l10n",
-        "target": "pool_group_b_linux_gcp",
+        "target": "hwpool_scriptworkerk8s_gecko3lando",
         "type": "group-pool",
         "group": "l10n*"
       }
     },
     {
       "data": {
-        "id": "l10n__hwpool_scriptworkerk8s_gecko3lando__group-pool",
+        "id": "l10n__pool_group_b_linux_gcp__group-pool",
         "source": "l10n",
-        "target": "hwpool_scriptworkerk8s_gecko3lando",
+        "target": "pool_group_b_linux_gcp",
         "type": "group-pool",
         "group": "l10n*"
       }
@@ -8710,22 +8710,22 @@
     },
     {
       "data": {
-        "id": "perftest_",
-        "label": "perftest-* (1)",
+        "id": "perftest",
+        "label": "perftest* (1)",
         "type": "taskNode",
         "color": "#f9f",
-        "group": "perftest-*",
+        "group": "perftest*",
         "count": 1
       },
       "classes": "taskNode"
     },
     {
       "data": {
-        "id": "perftest___hwpool_projautophone_geckotbitbargwperfa55__group-pool",
-        "source": "perftest_",
+        "id": "perftest__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
+        "source": "perftest",
         "target": "hwpool_projautophone_geckotbitbargwperfa55",
         "type": "group-pool",
-        "group": "perftest-*"
+        "group": "perftest*"
       }
     },
     {
@@ -8741,9 +8741,9 @@
     },
     {
       "data": {
-        "id": "perftest__perfstats__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
+        "id": "perftest__perfstats__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__perfstats",
-        "target": "hwpool_projautophone_geckotbitbargwperfa55",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-perfstats*"
       }
@@ -8759,18 +8759,18 @@
     },
     {
       "data": {
-        "id": "perftest__perfstats__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__perfstats__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__perfstats",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-perfstats*"
       }
     },
     {
       "data": {
-        "id": "perftest__perfstats__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__perfstats__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
         "source": "perftest__perfstats",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_projautophone_geckotbitbargwperfa55",
         "type": "group-pool",
         "group": "perftest-*-perfstats*"
       }
@@ -8797,18 +8797,18 @@
     },
     {
       "data": {
-        "id": "perftest__startup__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
+        "id": "perftest__startup__hwpool_projautophone_geckotbitbargwperfp6__group-pool",
         "source": "perftest__startup",
-        "target": "hwpool_projautophone_geckotbitbargwperfa55",
+        "target": "hwpool_projautophone_geckotbitbargwperfp6",
         "type": "group-pool",
         "group": "perftest-*-startup*"
       }
     },
     {
       "data": {
-        "id": "perftest__startup__hwpool_projautophone_geckotbitbargwperfp6__group-pool",
+        "id": "perftest__startup__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
         "source": "perftest__startup",
-        "target": "hwpool_projautophone_geckotbitbargwperfp6",
+        "target": "hwpool_projautophone_geckotbitbargwperfa55",
         "type": "group-pool",
         "group": "perftest-*-startup*"
       }
@@ -8866,9 +8866,9 @@
     },
     {
       "data": {
-        "id": "perftest__record__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
+        "id": "perftest__record__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__record",
-        "target": "hwpool_projautophone_geckotbitbargwperfa55",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-record*"
       }
@@ -8884,18 +8884,18 @@
     },
     {
       "data": {
-        "id": "perftest__record__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__record__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__record",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-record*"
       }
     },
     {
       "data": {
-        "id": "perftest__record__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__record__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
         "source": "perftest__record",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_projautophone_geckotbitbargwperfa55",
         "type": "group-pool",
         "group": "perftest-*-record*"
       }
@@ -8922,18 +8922,18 @@
     },
     {
       "data": {
-        "id": "perftest__controlled__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__controlled__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__controlled",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-controlled*"
       }
     },
     {
       "data": {
-        "id": "perftest__controlled__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__controlled__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__controlled",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-controlled*"
       }
@@ -8960,18 +8960,18 @@
     },
     {
       "data": {
-        "id": "perftest__domcount__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__domcount__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__domcount",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-domcount*"
       }
     },
     {
       "data": {
-        "id": "perftest__domcount__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__domcount__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__domcount",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-domcount*"
       }
@@ -8989,18 +8989,18 @@
     },
     {
       "data": {
-        "id": "perftest__http3__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__http3__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__http3",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-http3*"
       }
     },
     {
       "data": {
-        "id": "perftest__http3__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__http3__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__http3",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-http3*"
       }
@@ -9027,18 +9027,18 @@
     },
     {
       "data": {
-        "id": "perftest__livesites__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__livesites__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__livesites",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-livesites*"
       }
     },
     {
       "data": {
-        "id": "perftest__livesites__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__livesites__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__livesites",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-livesites*"
       }
@@ -9065,18 +9065,18 @@
     },
     {
       "data": {
-        "id": "perftest__llama__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__llama__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__llama",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-llama*"
       }
     },
     {
       "data": {
-        "id": "perftest__llama__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__llama__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__llama",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-llama*"
       }
@@ -9103,18 +9103,18 @@
     },
     {
       "data": {
-        "id": "perftest__multi__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__multi__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__multi",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-multi*"
       }
     },
     {
       "data": {
-        "id": "perftest__multi__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__multi__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__multi",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-multi*"
       }
@@ -9141,18 +9141,18 @@
     },
     {
       "data": {
-        "id": "perftest__perf__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__perf__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__perf",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-perf*"
       }
     },
     {
       "data": {
-        "id": "perftest__perf__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__perf__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__perf",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-perf*"
       }
@@ -9179,18 +9179,18 @@
     },
     {
       "data": {
-        "id": "perftest__summarizer__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__summarizer__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__summarizer",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-summarizer*"
       }
     },
     {
       "data": {
-        "id": "perftest__summarizer__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__summarizer__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__summarizer",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-summarizer*"
       }
@@ -9237,18 +9237,18 @@
     },
     {
       "data": {
-        "id": "perftest__service__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__service__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__service",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-service*"
       }
     },
     {
       "data": {
-        "id": "perftest__service__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__service__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__service",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-service*"
       }
@@ -9295,18 +9295,18 @@
     },
     {
       "data": {
-        "id": "perftest__tr8ns__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__tr8ns__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__tr8ns",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-tr8ns*"
       }
     },
     {
       "data": {
-        "id": "perftest__tr8ns__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__tr8ns__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__tr8ns",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-tr8ns*"
       }
@@ -9333,18 +9333,18 @@
     },
     {
       "data": {
-        "id": "perftest__browsertime__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__browsertime__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__browsertime",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-browsertime*"
       }
     },
     {
       "data": {
-        "id": "perftest__browsertime__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__browsertime__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__browsertime",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-browsertime*"
       }
@@ -9362,18 +9362,18 @@
     },
     {
       "data": {
-        "id": "perftest__xpcshell__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "id": "perftest__xpcshell__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "perftest__xpcshell",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "perftest-*-xpcshell*"
       }
     },
     {
       "data": {
-        "id": "perftest__xpcshell__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "id": "perftest__xpcshell__hwpool_relenghardware_geckotosx1015r8__group-pool",
         "source": "perftest__xpcshell",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "perftest-*-xpcshell*"
       }
@@ -9480,6 +9480,51 @@
     },
     {
       "data": {
+        "id": "release__hwpool_scriptworkerk8s_gecko3lando__group-pool",
+        "source": "release",
+        "target": "hwpool_scriptworkerk8s_gecko3lando",
+        "type": "group-pool",
+        "group": "release*"
+      }
+    },
+    {
+      "data": {
+        "id": "release__pool_group_b_linux_gcp__group-pool",
+        "source": "release",
+        "target": "pool_group_b_linux_gcp",
+        "type": "group-pool",
+        "group": "release*"
+      }
+    },
+    {
+      "data": {
+        "id": "release__hwpool_scriptworkerk8s_gecko3signing__group-pool",
+        "source": "release",
+        "target": "hwpool_scriptworkerk8s_gecko3signing",
+        "type": "group-pool",
+        "group": "release*"
+      }
+    },
+    {
+      "data": {
+        "id": "release__hwpool_scriptworkerk8s_gecko3shipit__group-pool",
+        "source": "release",
+        "target": "hwpool_scriptworkerk8s_gecko3shipit",
+        "type": "group-pool",
+        "group": "release*"
+      }
+    },
+    {
+      "data": {
+        "id": "release__hwpool_scriptworkerk8s_gecko3bouncer__group-pool",
+        "source": "release",
+        "target": "hwpool_scriptworkerk8s_gecko3bouncer",
+        "type": "group-pool",
+        "group": "release*"
+      }
+    },
+    {
+      "data": {
         "id": "release__hwpool_scriptworkerk8s_gecko3beetmover__group-pool",
         "source": "release",
         "target": "hwpool_scriptworkerk8s_gecko3beetmover",
@@ -9498,54 +9543,9 @@
     },
     {
       "data": {
-        "id": "release__hwpool_scriptworkerk8s_gecko3shipit__group-pool",
-        "source": "release",
-        "target": "hwpool_scriptworkerk8s_gecko3shipit",
-        "type": "group-pool",
-        "group": "release*"
-      }
-    },
-    {
-      "data": {
-        "id": "release__hwpool_scriptworkerk8s_gecko3signing__group-pool",
-        "source": "release",
-        "target": "hwpool_scriptworkerk8s_gecko3signing",
-        "type": "group-pool",
-        "group": "release*"
-      }
-    },
-    {
-      "data": {
-        "id": "release__pool_group_b_linux_gcp__group-pool",
-        "source": "release",
-        "target": "pool_group_b_linux_gcp",
-        "type": "group-pool",
-        "group": "release*"
-      }
-    },
-    {
-      "data": {
         "id": "release__hwpool_builtin_succeed__group-pool",
         "source": "release",
         "target": "hwpool_builtin_succeed",
-        "type": "group-pool",
-        "group": "release*"
-      }
-    },
-    {
-      "data": {
-        "id": "release__hwpool_scriptworkerk8s_gecko3lando__group-pool",
-        "source": "release",
-        "target": "hwpool_scriptworkerk8s_gecko3lando",
-        "type": "group-pool",
-        "group": "release*"
-      }
-    },
-    {
-      "data": {
-        "id": "release__hwpool_scriptworkerk8s_gecko3bouncer__group-pool",
-        "source": "release",
-        "target": "hwpool_scriptworkerk8s_gecko3bouncer",
         "type": "group-pool",
         "group": "release*"
       }
@@ -9581,18 +9581,18 @@
     },
     {
       "data": {
-        "id": "repackage__pool_group_b_linux_gcp__group-pool",
+        "id": "repackage__hwpool_scriptworkerk8s_geckotsigning__group-pool",
         "source": "repackage",
-        "target": "pool_group_b_linux_gcp",
+        "target": "hwpool_scriptworkerk8s_geckotsigning",
         "type": "group-pool",
         "group": "repackage*"
       }
     },
     {
       "data": {
-        "id": "repackage__hwpool_scriptworkerk8s_geckotsigning__group-pool",
+        "id": "repackage__pool_group_b_linux_gcp__group-pool",
         "source": "repackage",
-        "target": "hwpool_scriptworkerk8s_geckotsigning",
+        "target": "pool_group_b_linux_gcp",
         "type": "group-pool",
         "group": "repackage*"
       }
@@ -9757,18 +9757,18 @@
     },
     {
       "data": {
-        "id": "snap__pool_group_t_linux_2204_waylandsuffix__group-pool",
+        "id": "snap__pool_group_t_linux_2404_waylandsuffix__group-pool",
         "source": "snap",
-        "target": "pool_group_t_linux_2204_waylandsuffix",
+        "target": "pool_group_t_linux_2404_waylandsuffix",
         "type": "group-pool",
         "group": "snap*"
       }
     },
     {
       "data": {
-        "id": "snap__pool_group_t_linux_2404_waylandsuffix__group-pool",
+        "id": "snap__pool_group_t_linux_2204_waylandsuffix__group-pool",
         "source": "snap",
-        "target": "pool_group_t_linux_2404_waylandsuffix",
+        "target": "pool_group_t_linux_2204_waylandsuffix",
         "type": "group-pool",
         "group": "snap*"
       }
@@ -9795,27 +9795,18 @@
     },
     {
       "data": {
-        "id": "source__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
-        "source": "source",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
-        "type": "group-pool",
-        "group": "source*"
-      }
-    },
-    {
-      "data": {
-        "id": "source__pool_group_t_linux_docker__group-pool",
-        "source": "source",
-        "target": "pool_group_t_linux_docker",
-        "type": "group-pool",
-        "group": "source*"
-      }
-    },
-    {
-      "data": {
         "id": "source__pool_group_b_linux_gcp__group-pool",
         "source": "source",
         "target": "pool_group_b_linux_gcp",
+        "type": "group-pool",
+        "group": "source*"
+      }
+    },
+    {
+      "data": {
+        "id": "source__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
+        "source": "source",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "source*"
       }
@@ -9843,6 +9834,15 @@
         "id": "source__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "source",
         "target": "pool_group_win11_64_24h2_suffix",
+        "type": "group-pool",
+        "group": "source*"
+      }
+    },
+    {
+      "data": {
+        "id": "source__pool_group_t_linux_docker__group-pool",
+        "source": "source",
+        "target": "pool_group_t_linux_docker",
         "type": "group-pool",
         "group": "source*"
       }
@@ -9898,24 +9898,6 @@
     },
     {
       "data": {
-        "id": "startup__pool_group_t_linux_arm64_docker__group-pool",
-        "source": "startup",
-        "target": "pool_group_t_linux_arm64_docker",
-        "type": "group-pool",
-        "group": "startup*"
-      }
-    },
-    {
-      "data": {
-        "id": "startup__pool_group_t_linux_docker__group-pool",
-        "source": "startup",
-        "target": "pool_group_t_linux_docker",
-        "type": "group-pool",
-        "group": "startup*"
-      }
-    },
-    {
-      "data": {
         "id": "startup__hwpool_relenghardware_geckotosx1400r8__group-pool",
         "source": "startup",
         "target": "hwpool_relenghardware_geckotosx1400r8",
@@ -9928,6 +9910,24 @@
         "id": "startup__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "startup",
         "target": "pool_group_win11_64_24h2_suffix",
+        "type": "group-pool",
+        "group": "startup*"
+      }
+    },
+    {
+      "data": {
+        "id": "startup__pool_group_t_linux_arm64_docker__group-pool",
+        "source": "startup",
+        "target": "pool_group_t_linux_arm64_docker",
+        "type": "group-pool",
+        "group": "startup*"
+      }
+    },
+    {
+      "data": {
+        "id": "startup__pool_group_t_linux_docker__group-pool",
+        "source": "startup",
+        "target": "pool_group_t_linux_docker",
         "type": "group-pool",
         "group": "startup*"
       }
@@ -9994,18 +9994,9 @@
     },
     {
       "data": {
-        "id": "test__qr__gecko_t_t_linux_docker_kvm__group-pool",
+        "id": "test__qr__pool_group_win10_64_2009_suffix__group-pool",
         "source": "test__qr",
-        "target": "gecko_t_t_linux_docker_kvm",
-        "type": "group-pool",
-        "group": "test-*-qr*"
-      }
-    },
-    {
-      "data": {
-        "id": "test__qr__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
-        "source": "test__qr",
-        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
+        "target": "pool_group_win10_64_2009_suffix",
         "type": "group-pool",
         "group": "test-*-qr*"
       }
@@ -10021,27 +10012,9 @@
     },
     {
       "data": {
-        "id": "test__qr__hwpool_projautophone_geckotbitbargwunitp5__group-pool",
+        "id": "test__qr__hwpool_relenghardware_geckotlinuxtalos1804__group-pool",
         "source": "test__qr",
-        "target": "hwpool_projautophone_geckotbitbargwunitp5",
-        "type": "group-pool",
-        "group": "test-*-qr*"
-      }
-    },
-    {
-      "data": {
-        "id": "test__qr__pool_group_win10_64_2009_suffix__group-pool",
-        "source": "test__qr",
-        "target": "pool_group_win10_64_2009_suffix",
-        "type": "group-pool",
-        "group": "test-*-qr*"
-      }
-    },
-    {
-      "data": {
-        "id": "test__qr__hwpool_relenghardware_geckotosx1015r8__group-pool",
-        "source": "test__qr",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotlinuxtalos1804",
         "type": "group-pool",
         "group": "test-*-qr*"
       }
@@ -10057,9 +10030,36 @@
     },
     {
       "data": {
+        "id": "test__qr__gecko_t_t_linux_docker_kvm__group-pool",
+        "source": "test__qr",
+        "target": "gecko_t_t_linux_docker_kvm",
+        "type": "group-pool",
+        "group": "test-*-qr*"
+      }
+    },
+    {
+      "data": {
+        "id": "test__qr__hwpool_projautophone_geckotbitbargwunitp5__group-pool",
+        "source": "test__qr",
+        "target": "hwpool_projautophone_geckotbitbargwunitp5",
+        "type": "group-pool",
+        "group": "test-*-qr*"
+      }
+    },
+    {
+      "data": {
         "id": "test__qr__pool_group_t_linux_docker_noscratch__group-pool",
         "source": "test__qr",
         "target": "pool_group_t_linux_docker_noscratch",
+        "type": "group-pool",
+        "group": "test-*-qr*"
+      }
+    },
+    {
+      "data": {
+        "id": "test__qr__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "source": "test__qr",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "test-*-qr*"
       }
@@ -10106,15 +10106,6 @@
     },
     {
       "data": {
-        "id": "test__browsertime__hwpool_projautophone_geckotbitbargwperfs24__group-pool",
-        "source": "test__browsertime",
-        "target": "hwpool_projautophone_geckotbitbargwperfs24",
-        "type": "group-pool",
-        "group": "test-*-browsertime*"
-      }
-    },
-    {
-      "data": {
         "id": "test__browsertime__hwpool_projautophone_geckotbitbargwperfa55__group-pool",
         "source": "test__browsertime",
         "target": "hwpool_projautophone_geckotbitbargwperfa55",
@@ -10124,9 +10115,9 @@
     },
     {
       "data": {
-        "id": "test__browsertime__hwpool_projautophone_geckotbitbargwperfp6__group-pool",
+        "id": "test__browsertime__hwpool_projautophone_geckotbitbargwperfs24__group-pool",
         "source": "test__browsertime",
-        "target": "hwpool_projautophone_geckotbitbargwperfp6",
+        "target": "hwpool_projautophone_geckotbitbargwperfs24",
         "type": "group-pool",
         "group": "test-*-browsertime*"
       }
@@ -10142,9 +10133,9 @@
     },
     {
       "data": {
-        "id": "test__browsertime__pool_group_win11_64_24h2_suffix__group-pool",
+        "id": "test__browsertime__hwpool_projautophone_geckotbitbargwperfp6__group-pool",
         "source": "test__browsertime",
-        "target": "pool_group_win11_64_24h2_suffix",
+        "target": "hwpool_projautophone_geckotbitbargwperfp6",
         "type": "group-pool",
         "group": "test-*-browsertime*"
       }
@@ -10154,6 +10145,15 @@
         "id": "test__browsertime__hwpool_relenghardware_geckotosx1500m4__group-pool",
         "source": "test__browsertime",
         "target": "hwpool_relenghardware_geckotosx1500m4",
+        "type": "group-pool",
+        "group": "test-*-browsertime*"
+      }
+    },
+    {
+      "data": {
+        "id": "test__browsertime__pool_group_win11_64_24h2_suffix__group-pool",
+        "source": "test__browsertime",
+        "target": "pool_group_win11_64_24h2_suffix",
         "type": "group-pool",
         "group": "test-*-browsertime*"
       }
@@ -10289,18 +10289,18 @@
     },
     {
       "data": {
-        "id": "test__nightlyasrelease__pool_group_win11_64_24h2_suffix__group-pool",
+        "id": "test__nightlyasrelease__hwpool_relenghardware_geckotosx1400r8__group-pool",
         "source": "test__nightlyasrelease",
-        "target": "pool_group_win11_64_24h2_suffix",
+        "target": "hwpool_relenghardware_geckotosx1400r8",
         "type": "group-pool",
         "group": "test-*-nightlyasrelease*"
       }
     },
     {
       "data": {
-        "id": "test__nightlyasrelease__hwpool_relenghardware_geckotosx1400r8__group-pool",
+        "id": "test__nightlyasrelease__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "test__nightlyasrelease",
-        "target": "hwpool_relenghardware_geckotosx1400r8",
+        "target": "pool_group_win11_64_24h2_suffix",
         "type": "group-pool",
         "group": "test-*-nightlyasrelease*"
       }
@@ -10432,9 +10432,9 @@
     },
     {
       "data": {
-        "id": "test__web__pool_group_t_linux_docker_noscratch__group-pool",
+        "id": "test__web__hwpool_relenghardware_geckotosx1500m4__group-pool",
         "source": "test__web",
-        "target": "pool_group_t_linux_docker_noscratch",
+        "target": "hwpool_relenghardware_geckotosx1500m4",
         "type": "group-pool",
         "group": "test-*-web*"
       }
@@ -10459,9 +10459,9 @@
     },
     {
       "data": {
-        "id": "test__web__hwpool_relenghardware_geckotosx1500m4__group-pool",
+        "id": "test__web__pool_group_t_linux_docker_noscratch__group-pool",
         "source": "test__web",
-        "target": "hwpool_relenghardware_geckotosx1500m4",
+        "target": "pool_group_t_linux_docker_noscratch",
         "type": "group-pool",
         "group": "test-*-web*"
       }
@@ -10488,18 +10488,18 @@
     },
     {
       "data": {
-        "id": "test__asan__pool_group_win11_64_24h2_suffix__group-pool",
+        "id": "test__asan__pool_group_t_linux_docker_noscratch__group-pool",
         "source": "test__asan",
-        "target": "pool_group_win11_64_24h2_suffix",
+        "target": "pool_group_t_linux_docker_noscratch",
         "type": "group-pool",
         "group": "test-*-asan*"
       }
     },
     {
       "data": {
-        "id": "test__asan__pool_group_t_linux_docker_noscratch__group-pool",
+        "id": "test__asan__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "test__asan",
-        "target": "pool_group_t_linux_docker_noscratch",
+        "target": "pool_group_win11_64_24h2_suffix",
         "type": "group-pool",
         "group": "test-*-asan*"
       }
@@ -10526,24 +10526,6 @@
     },
     {
       "data": {
-        "id": "test__ccov__pool_group_t_linux_docker__group-pool",
-        "source": "test__ccov",
-        "target": "pool_group_t_linux_docker",
-        "type": "group-pool",
-        "group": "test-*-ccov*"
-      }
-    },
-    {
-      "data": {
-        "id": "test__ccov__pool_group_t_linux_large_noscratch_gcp__group-pool",
-        "source": "test__ccov",
-        "target": "pool_group_t_linux_large_noscratch_gcp",
-        "type": "group-pool",
-        "group": "test-*-ccov*"
-      }
-    },
-    {
-      "data": {
         "id": "test__ccov__pool_group_t_linux_docker_noscratch__group-pool",
         "source": "test__ccov",
         "target": "pool_group_t_linux_docker_noscratch",
@@ -10556,6 +10538,24 @@
         "id": "test__ccov__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "test__ccov",
         "target": "pool_group_win11_64_24h2_suffix",
+        "type": "group-pool",
+        "group": "test-*-ccov*"
+      }
+    },
+    {
+      "data": {
+        "id": "test__ccov__pool_group_t_linux_docker__group-pool",
+        "source": "test__ccov",
+        "target": "pool_group_t_linux_docker",
+        "type": "group-pool",
+        "group": "test-*-ccov*"
+      }
+    },
+    {
+      "data": {
+        "id": "test__ccov__pool_group_t_linux_large_noscratch_gcp__group-pool",
+        "source": "test__ccov",
+        "target": "pool_group_t_linux_large_noscratch_gcp",
         "type": "group-pool",
         "group": "test-*-ccov*"
       }
@@ -10576,24 +10576,6 @@
         "id": "test__devedition__hwpool_geckot_win116424h2__group-pool",
         "source": "test__devedition",
         "target": "hwpool_geckot_win116424h2",
-        "type": "group-pool",
-        "group": "test-*-devedition*"
-      }
-    },
-    {
-      "data": {
-        "id": "test__devedition__pool_group_t_linux_docker__group-pool",
-        "source": "test__devedition",
-        "target": "pool_group_t_linux_docker",
-        "type": "group-pool",
-        "group": "test-*-devedition*"
-      }
-    },
-    {
-      "data": {
-        "id": "test__devedition__hwpool_relenghardware_geckotosx1015r8__group-pool",
-        "source": "test__devedition",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "test-*-devedition*"
       }
@@ -10621,6 +10603,24 @@
         "id": "test__devedition__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "test__devedition",
         "target": "pool_group_win11_64_24h2_suffix",
+        "type": "group-pool",
+        "group": "test-*-devedition*"
+      }
+    },
+    {
+      "data": {
+        "id": "test__devedition__pool_group_t_linux_docker__group-pool",
+        "source": "test__devedition",
+        "target": "pool_group_t_linux_docker",
+        "type": "group-pool",
+        "group": "test-*-devedition*"
+      }
+    },
+    {
+      "data": {
+        "id": "test__devedition__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "source": "test__devedition",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "test-*-devedition*"
       }
@@ -10864,9 +10864,9 @@
     },
     {
       "data": {
-        "id": "test__mochitest__pool_group_t_linux_docker_noscratch__group-pool",
+        "id": "test__mochitest__hwpool_relenghardware_geckotosx1500m4__group-pool",
         "source": "test__mochitest",
-        "target": "pool_group_t_linux_docker_noscratch",
+        "target": "hwpool_relenghardware_geckotosx1500m4",
         "type": "group-pool",
         "group": "test-*-mochitest*"
       }
@@ -10891,9 +10891,9 @@
     },
     {
       "data": {
-        "id": "test__mochitest__hwpool_relenghardware_geckotosx1500m4__group-pool",
+        "id": "test__mochitest__pool_group_t_linux_docker_noscratch__group-pool",
         "source": "test__mochitest",
-        "target": "hwpool_relenghardware_geckotosx1500m4",
+        "target": "pool_group_t_linux_docker_noscratch",
         "type": "group-pool",
         "group": "test-*-mochitest*"
       }
@@ -10920,9 +10920,9 @@
     },
     {
       "data": {
-        "id": "test__reftest__pool_group_t_linux_docker_noscratch__group-pool",
+        "id": "test__reftest__hwpool_relenghardware_geckotosx1500m4__group-pool",
         "source": "test__reftest",
-        "target": "pool_group_t_linux_docker_noscratch",
+        "target": "hwpool_relenghardware_geckotosx1500m4",
         "type": "group-pool",
         "group": "test-*-reftest*"
       }
@@ -10947,9 +10947,9 @@
     },
     {
       "data": {
-        "id": "test__reftest__hwpool_relenghardware_geckotosx1500m4__group-pool",
+        "id": "test__reftest__pool_group_t_linux_docker_noscratch__group-pool",
         "source": "test__reftest",
-        "target": "hwpool_relenghardware_geckotosx1500m4",
+        "target": "pool_group_t_linux_docker_noscratch",
         "type": "group-pool",
         "group": "test-*-reftest*"
       }
@@ -11005,18 +11005,18 @@
     },
     {
       "data": {
-        "id": "test__xpcshell__pool_group_t_linux_docker__group-pool",
+        "id": "test__xpcshell__pool_group_t_linux_docker_noscratch__group-pool",
         "source": "test__xpcshell",
-        "target": "pool_group_t_linux_docker",
+        "target": "pool_group_t_linux_docker_noscratch",
         "type": "group-pool",
         "group": "test-*-xpcshell*"
       }
     },
     {
       "data": {
-        "id": "test__xpcshell__pool_group_t_linux_docker_noscratch__group-pool",
+        "id": "test__xpcshell__hwpool_relenghardware_geckotosx1500m4__group-pool",
         "source": "test__xpcshell",
-        "target": "pool_group_t_linux_docker_noscratch",
+        "target": "hwpool_relenghardware_geckotosx1500m4",
         "type": "group-pool",
         "group": "test-*-xpcshell*"
       }
@@ -11041,9 +11041,9 @@
     },
     {
       "data": {
-        "id": "test__xpcshell__hwpool_relenghardware_geckotosx1500m4__group-pool",
+        "id": "test__xpcshell__pool_group_t_linux_docker__group-pool",
         "source": "test__xpcshell",
-        "target": "hwpool_relenghardware_geckotosx1500m4",
+        "target": "pool_group_t_linux_docker",
         "type": "group-pool",
         "group": "test-*-xpcshell*"
       }
@@ -11061,18 +11061,18 @@
     },
     {
       "data": {
-        "id": "test__awsy__pool_group_win11_64_24h2_suffix__group-pool",
+        "id": "test__awsy__hwpool_relenghardware_geckotosx1400r8__group-pool",
         "source": "test__awsy",
-        "target": "pool_group_win11_64_24h2_suffix",
+        "target": "hwpool_relenghardware_geckotosx1400r8",
         "type": "group-pool",
         "group": "test-*-awsy*"
       }
     },
     {
       "data": {
-        "id": "test__awsy__hwpool_relenghardware_geckotosx1400r8__group-pool",
+        "id": "test__awsy__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "test__awsy",
-        "target": "hwpool_relenghardware_geckotosx1400r8",
+        "target": "pool_group_win11_64_24h2_suffix",
         "type": "group-pool",
         "group": "test-*-awsy*"
       }
@@ -11128,18 +11128,18 @@
     },
     {
       "data": {
-        "id": "test__talos__pool_group_win11_64_24h2_suffix__group-pool",
+        "id": "test__talos__hwpool_relenghardware_geckotosx1400r8__group-pool",
         "source": "test__talos",
-        "target": "pool_group_win11_64_24h2_suffix",
+        "target": "hwpool_relenghardware_geckotosx1400r8",
         "type": "group-pool",
         "group": "test-*-talos*"
       }
     },
     {
       "data": {
-        "id": "test__talos__hwpool_relenghardware_geckotosx1400r8__group-pool",
+        "id": "test__talos__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "test__talos",
-        "target": "hwpool_relenghardware_geckotosx1400r8",
+        "target": "pool_group_win11_64_24h2_suffix",
         "type": "group-pool",
         "group": "test-*-talos*"
       }
@@ -11206,42 +11206,6 @@
     },
     {
       "data": {
-        "id": "toolchain__pool_group_b_win2022__group-pool",
-        "source": "toolchain",
-        "target": "pool_group_b_win2022",
-        "type": "group-pool",
-        "group": "toolchain*"
-      }
-    },
-    {
-      "data": {
-        "id": "toolchain__hwpool_relenghardware_gecko3bosx1015__group-pool",
-        "source": "toolchain",
-        "target": "hwpool_relenghardware_gecko3bosx1015",
-        "type": "group-pool",
-        "group": "toolchain*"
-      }
-    },
-    {
-      "data": {
-        "id": "toolchain__pool_group_b_linux_gcp_aarch64__group-pool",
-        "source": "toolchain",
-        "target": "pool_group_b_linux_gcp_aarch64",
-        "type": "group-pool",
-        "group": "toolchain*"
-      }
-    },
-    {
-      "data": {
-        "id": "toolchain__pool_group_images_gcp_aarch64__group-pool",
-        "source": "toolchain",
-        "target": "pool_group_images_gcp_aarch64",
-        "type": "group-pool",
-        "group": "toolchain*"
-      }
-    },
-    {
-      "data": {
         "id": "toolchain__pool_group_b_linux_gcp__group-pool",
         "source": "toolchain",
         "target": "pool_group_b_linux_gcp",
@@ -11260,9 +11224,45 @@
     },
     {
       "data": {
+        "id": "toolchain__hwpool_relenghardware_gecko3bosx1015__group-pool",
+        "source": "toolchain",
+        "target": "hwpool_relenghardware_gecko3bosx1015",
+        "type": "group-pool",
+        "group": "toolchain*"
+      }
+    },
+    {
+      "data": {
         "id": "toolchain__hwpool_relenghardware_gecko3bosxarm64__group-pool",
         "source": "toolchain",
         "target": "hwpool_relenghardware_gecko3bosxarm64",
+        "type": "group-pool",
+        "group": "toolchain*"
+      }
+    },
+    {
+      "data": {
+        "id": "toolchain__pool_group_b_win2022__group-pool",
+        "source": "toolchain",
+        "target": "pool_group_b_win2022",
+        "type": "group-pool",
+        "group": "toolchain*"
+      }
+    },
+    {
+      "data": {
+        "id": "toolchain__pool_group_b_linux_gcp_aarch64__group-pool",
+        "source": "toolchain",
+        "target": "pool_group_b_linux_gcp_aarch64",
+        "type": "group-pool",
+        "group": "toolchain*"
+      }
+    },
+    {
+      "data": {
+        "id": "toolchain__pool_group_images_gcp_aarch64__group-pool",
+        "source": "toolchain",
+        "target": "pool_group_images_gcp_aarch64",
         "type": "group-pool",
         "group": "toolchain*"
       }
@@ -11329,18 +11329,9 @@
     },
     {
       "data": {
-        "id": "update__pool_group_t_linux_docker__group-pool",
+        "id": "update__hwpool_relenghardware_geckotosx1500m4__group-pool",
         "source": "update",
-        "target": "pool_group_t_linux_docker",
-        "type": "group-pool",
-        "group": "update*"
-      }
-    },
-    {
-      "data": {
-        "id": "update__hwpool_relenghardware_geckotosx1015r8__group-pool",
-        "source": "update",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "target": "hwpool_relenghardware_geckotosx1500m4",
         "type": "group-pool",
         "group": "update*"
       }
@@ -11365,9 +11356,18 @@
     },
     {
       "data": {
-        "id": "update__hwpool_relenghardware_geckotosx1500m4__group-pool",
+        "id": "update__pool_group_t_linux_docker__group-pool",
         "source": "update",
-        "target": "hwpool_relenghardware_geckotosx1500m4",
+        "target": "pool_group_t_linux_docker",
+        "type": "group-pool",
+        "group": "update*"
+      }
+    },
+    {
+      "data": {
+        "id": "update__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "source": "update",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
         "type": "group-pool",
         "group": "update*"
       }
@@ -11414,18 +11414,18 @@
     },
     {
       "data": {
-        "id": "upload__hwpool_builtin_succeed__group-pool",
+        "id": "upload__pool_group_b_linuxsuffix__group-pool",
         "source": "upload",
-        "target": "hwpool_builtin_succeed",
+        "target": "pool_group_b_linuxsuffix",
         "type": "group-pool",
         "group": "upload*"
       }
     },
     {
       "data": {
-        "id": "upload__pool_group_b_linuxsuffix__group-pool",
+        "id": "upload__hwpool_builtin_succeed__group-pool",
         "source": "upload",
-        "target": "pool_group_b_linuxsuffix",
+        "target": "hwpool_builtin_succeed",
         "type": "group-pool",
         "group": "upload*"
       }
@@ -11463,9 +11463,9 @@
     },
     {
       "data": {
-        "id": "webrender__hwpool_projautophone_geckotlambdaperfa55__group-pool",
+        "id": "webrender__pool_group_b_linux_gcp__group-pool",
         "source": "webrender",
-        "target": "hwpool_projautophone_geckotlambdaperfa55",
+        "target": "pool_group_b_linux_gcp",
         "type": "group-pool",
         "group": "webrender*"
       }
@@ -11481,9 +11481,9 @@
     },
     {
       "data": {
-        "id": "webrender__hwpool_projautophone_geckotbitbargwunitp5__group-pool",
+        "id": "webrender__hwpool_projautophone_geckotlambdaperfa55__group-pool",
         "source": "webrender",
-        "target": "hwpool_projautophone_geckotbitbargwunitp5",
+        "target": "hwpool_projautophone_geckotlambdaperfa55",
         "type": "group-pool",
         "group": "webrender*"
       }
@@ -11499,34 +11499,34 @@
     },
     {
       "data": {
-        "id": "webrender__hwpool_relenghardware_geckotosx1015r8__group-pool",
-        "source": "webrender",
-        "target": "hwpool_relenghardware_geckotosx1015r8",
-        "type": "group-pool",
-        "group": "webrender*"
-      }
-    },
-    {
-      "data": {
-        "id": "webrender__pool_group_b_linux_gcp__group-pool",
-        "source": "webrender",
-        "target": "pool_group_b_linux_gcp",
-        "type": "group-pool",
-        "group": "webrender*"
-      }
-    },
-    {
-      "data": {
         "id": "webrender__pool_group_win11_64_24h2_suffix__group-pool",
         "source": "webrender",
         "target": "pool_group_win11_64_24h2_suffix",
         "type": "group-pool",
         "group": "webrender*"
       }
+    },
+    {
+      "data": {
+        "id": "webrender__hwpool_projautophone_geckotbitbargwunitp5__group-pool",
+        "source": "webrender",
+        "target": "hwpool_projautophone_geckotbitbargwunitp5",
+        "type": "group-pool",
+        "group": "webrender*"
+      }
+    },
+    {
+      "data": {
+        "id": "webrender__hwpool_relenghardware_geckotosx1015r8__group-pool",
+        "source": "webrender",
+        "target": "hwpool_relenghardware_geckotosx1015r8",
+        "type": "group-pool",
+        "group": "webrender*"
+      }
     }
   ],
   "metadata": {
-    "created_at": "2025-06-27T17:04:58.782700",
+    "created_at": "2025-07-01T16:55:54.560377",
     "task_count": 37903,
     "task_group_count": 137,
     "worker_pool_count": 87,
@@ -11549,19 +11549,19 @@
       },
       "tasks_json": {
         "path": "/Users/aerickson/git/firefox/tasks.json",
-        "mtime": "2025-06-27T16:42:05.451445"
+        "mtime": "2025-07-01T16:29:31.866811"
       }
     },
     "repo_git": {
-      "sha": "59366cb0133d85c40d6750c9925a5cc216249c40-dirty",
+      "sha": "fe63935d50f770d5ba1fef6d6cd490093c202e31",
       "remote": {
-        "branch": "cityscape_tets",
-        "remote": "origin",
-        "url": "git@github.com:aerickson/relops-infra.git"
+        "branch": "ci-config-tool-work-062325",
+        "remote": "upstream",
+        "url": "git@github.com:mozilla-platform-ops/relops-infra.git"
       }
     },
     "fxci_repo_git": {
-      "sha": "46f3dbec4b4872d2c7c422e86577c0590dd8567b",
+      "sha": "259ea7a197cb1b90e0ac1fd07cffcc4a4a8f227e",
       "remote": {
         "branch": "main",
         "remote": "upstream",
@@ -11569,7 +11569,7 @@
       }
     },
     "mozilla_repo_git": {
-      "sha": "f7ea941c05c8c8f4a98cb817c2ca37a4918a05fb",
+      "sha": "e8f6d0bd4a714048584bbb0d523e5f96559599d8",
       "remote": {
         "branch": "main",
         "remote": "origin",
